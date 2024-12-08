@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/png"/>
+    <title>Cardápio Barraca Printf("Natal"); | Cardápio Digital Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/static/css/global.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar bg-base-100">
+      <div class="container mx-auto max-w-6xl">
+        <!-- Título -->
+        <div class="flex-1">
+          <a href="/" class="btn btn-ghost text-xl">
+            <img src="Chill_guy_gp.jpg" alt="Logo" class="h-10"/>
+          </a>
+        </div>
+
+        <div class="flex gap-2">
+          <!-- Pesquisa -->
+          <form action="/pesquisar/" method="GET">
+            <label class="input input-bordered flex items-center gap-2 h-10 w-36 md:w-auto">
+              <input type="text" name="q" placeholder="Pesquisar..." class="search w-full" required/>
+              <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+            </label>
+          </form>
+
+          <!-- Perfil -->
+          <div class="dropdown dropdown-end">
+            <div class="avatar placeholder" tabindex="0" role="button">
+              <div class="bg-neutral text-neutral-content rounded-full w-10">
+                <span>User</span>
+              </div>
+            </div>
+
+            <!-- Dropdown perfil -->
+            <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+              <li><a href="/login">Login</a></li>
+              <li><a>Sair</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="detalhe"></div>
+
+    <!-- Banner -->
+    <div class="banner text-white mt-6">
+      <div class="bg-black/50">
+        <div class="container px-4 mx-auto max-w-6xl py-10 md:py-20">
+          <h1 class="text-5xl font-semibold mb-8">A melhor barraca é aqui!</h1>
+          <h2 class="text-2xl font-thin mb-8 md:mb-14">Variedade e qualidade que só a gente tem!</h2>
+          <a href="#cardapio" class="btn btn-primary">VEJA O NOSSO CARDÁPIO</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produtos -->
+    <main id="cardapio" class="container px-4 mt-8 mx-auto max-w-6xl">
+      <h1 class="text-5xl font-thin mb-8">Nosso cardápio</h1>
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover w-full h-44"
+              src="Boloimagem.jpg"
+            />
+          </figure>
+          <div class="card-body p-6">
+            <h2 class="card-title">
+              Bolos
+              <div class="badge badge-secondary">NOVO SABORES</div>
+            </h2>
+            <p>Chocolate, Cenoura, Red Velvet (CupCake) ...</p>
+            <div class="font-bold">€ 2,00</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover w-full h-44"
+              src="TortaFrango.jpg"
+            />
+          </figure>
+          <div class="card-body p-6">
+            <h2 class="card-title">Torta de frango</h2>
+            <p>Caseira e deliciosa</p>
+            <div class="font-bold">€ 2,00</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover w-full h-44"
+              src="https://files.sunoresearch.com.br/n/uploads/2023/04/coca-cola-resultados-1t23.jpg"
+            />
+          </figure>
+          <div class="card-body p-6">
+            <h2 class="card-title">Sumos
+                <div class="badge badge-secondary">MAIS SABORES</div>
+            </h2>
+            <p>Coca-Cola, 7UP, Fanta, Ice Tea, sumos naturais ...</p>
+            <div class="font-bold">€ 1,00</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+      
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="pudim.webp"
+          />
+          </figure>
+          <div class="card-body p-6">
+            <h2 class="card-title">Pudim</h2>
+            <p>Feito pelo Tiago</p>
+            <div class="font-bold">€ 1,00</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="PastelNata.webp"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Pastel de Nata</h2>
+          <p>Provavelmente comprado</p>
+          <div class="font-bold">€ 0,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+    
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="salame_chocolate.jpg"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Salame de Chocolate</h2>
+          <p>MAKSIMMMMMM</p>
+          <div class="font-bold">€ 0,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="Bauru.avif"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Bauru</h2>
+          <p>Pão misto com mais algumas coisinhas ai</p>
+          <div class="font-bold">€ 1,00</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="pacoca-amendoim.webp"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Paçoca</h2>
+          <p>Traducional Brasileiro</p>
+          <div class="font-bold">€ 0,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="quiche2.jpg"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Quiche</h2>
+          <p>Alguns falam que é torta</p>
+          <div class="font-bold">€ 1,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="croquete-carne.webp"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Croquete</h2>
+          <p>Tambem conhecido como quibe</p>
+          <div class="font-bold">€ 0,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+
+        <a href="/produto" class="card bg-base-100 shadow-xl">
+          <figure>
+          <img
+            class="object-cover w-full h-44"
+            src="pizza.jpg"
+          />
+          </figure>
+          <div class="card-body p-6">
+          <h2 class="card-title">Pizza</h2>
+          <p>Com uma Coquinha gelada :p</p>
+          <div class="font-bold">€ 1,50</div>
+            <div class="rating rating-xs">
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" checked/>
+              <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"/>
+            </div>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <div class="bg-base-200">
+      <footer class="footer p-10 text-base-content mt-8 container mx-auto max-w-6xl">
+        <aside>
+          <p>
+            Cardápio Barraca Printf("Natal");
+            <br/>
+            Desenvolvido por Sabryna Grilo.
+            <div>
+              <img src="minha fotinha.jpg" alt="Logo" class="h-20"/>
+            </div>
+            <b
+              >Este site é apenas um design para<br>nossa banca de natal, não se trata<br/>
+              de um comércio real!</b
+            >
+          </p>
+        </aside>
+        <nav>
+          <h6 class="footer-title">Redes sociais</h6>
+          <a class="link link-hover"><i class="fa-fw fa-brands fa-instagram"></i> Instagram</a>
+          <a class="link link-hover"><i class="fa-fw fa-brands fa-facebook"></i> Facebook</a>
+          <a class="link link-hover"><i class="fa-fw fa-brands fa-youtube"></i> YouTube</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Empresa</h6>
+          <a target="_blank" href="" class="link link-hover">Sobre nós</a>
+          <a target="_blank" href="" class="link link-hover">Contato</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Termos de Uso</a>
+          <a class="link link-hover">Política de Privacidade</a>
+          <a class="link link-hover">Política de Cookies</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
